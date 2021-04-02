@@ -1,0 +1,13 @@
+Mac command lines
+1. ipconfig getifaddr en0. - For ethernet, ipconfig getifaddr en1
+2. dig (hostname)
+3. dig -x (hostname)
+4. General linux idea, didn’t test w Kali: SCP [filename] [remote directory address w/ username]
+5. sudo lsof -i:22 - returns nothing if not listening, gives info if that port is listening
+6. sudo lsof -PiTCP -sTCP:LISTEN
+	sudo lsof -i -P -n | grep LISTEN
+7. Curl -o [chosen file name] [url] 
+(or Curl -0 [url] ? - can’t confirm that this works)
+8. curl -I [url]
+9. curl -v -s -o - -X OPTIONS [url]
+
