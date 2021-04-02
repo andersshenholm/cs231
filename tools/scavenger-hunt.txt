@@ -3,7 +3,7 @@ Mac command lines
 2. dig (hostname)
 3. dig -x (hostname)
 4. General linux idea, didn’t test w Kali: SCP [filename] [remote directory address w/ username]
-5. sudo lsof -i:22 - returns nothing if not listening, gives info if that port is listening
+5. sudo lsof -i:[#] - returns nothing if not listening, gives info if that port is listening
 6. sudo lsof -PiTCP -sTCP:LISTEN
 	sudo lsof -i -P -n | grep LISTEN
 7. Curl -o [chosen file name] [url] 
