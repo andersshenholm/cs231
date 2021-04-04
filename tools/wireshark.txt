@@ -1,0 +1,55 @@
+===== DAYTIME =====
+
+1.
+
+
+1	0.000000000	10.0.2.15	129.6.15.28	TCP	74	48462 → 13 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=392347228 TSecr=0 WS=128
+
+2	0.037748081	129.6.15.28	10.0.2.15	TCP	60	13 → 48462 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460
+
+3	0.037786576	10.0.2.15	129.6.15.28	TCP	54	48462 → 13 [ACK] Seq=1 Ack=1 Win=64240 Len=0
+
+
+
+
+2.	Port 48462. The client needs a port for the server to route the request through. 
+
+
+3.	
+
+4	0.071774342	129.6.15.28	10.0.2.15	DAYTIME	105	DAYTIME Response
+
+
+
+4.	
+Type: Response
+Daytime: \n59308 21-04-04 18:35:43 50 0 0 360.1 UTC(NIST) * \n
+
+Modified Julian date: 59308
+Date and time: 21-04-04 18:35:43
+TT code: 50 – means US is in daylight savings time
+L – leap year indicator: 0
+H- health of server indicator: 0 (all good)
+Network delay compensation in milliseconds: 360.1
+UTC(NIST): marks timezone and that this is NIST info
+
+5.	SYN marks the beginning of a connection between a client and server.
+6.	ACK confirms that the connection was made using the correct sequence number
+7.	FIN terminates the connection between client and server
+8.	The daytime server initiated the closing of the TCP connection. We can tell because it was the first one to send a FIN signal. 
+
+
+
+===== HTTP =====
+
+1.	1 TCP connection
+2.	Frame 7: 7 10.0.2.15  45.79.89.123 HTTP 395 GET /index.html HTTP/1.1
+3.	Frame 11: 11 10.0.2.15  45.79.89.123 HTTP 364 GET /jeff_square_head.jpg HTTP/1.1
+
+
+===== QUESTIONS======
+
+Why are the first 2 frames in accessing Jeff’s homepage the same?
+What’s PSH mean?
+What does it mean when frames are out of order? How does it happen, how do computers deal with it?
+
