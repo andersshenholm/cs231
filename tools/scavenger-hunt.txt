@@ -11,3 +11,10 @@ Mac command lines
 8. curl -I [url]
 9. curl -v -s -o - -X OPTIONS [url]
 
+From discussion: 
+4.
+Scp shenholma@mantis.mathcs.carleton.edu - logs you in w password
+Navigate to folder
+put example.txt 
+
+(also just drag and drop)
